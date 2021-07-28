@@ -7,10 +7,10 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__logo">
-        <a class="page-header__logo-pic">
+        <a class="page-header__logo-pic" href="index.html">
           <img src="img/logo-pic-mobile.svg" width="34" height="38" alt="Логотип интернет-магазина Кэт Энерджи">
         </a>
-        <a class="page-header__logo-name">
+        <a class="page-header__logo-name" href="index.html">
           <img src="img/logo-name-mobile.svg" width="101" height="18" alt="Название интернет-магазина Кэт Энерджи">
         </a>
       </div>
@@ -18,8 +18,8 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__site-list">
-          <li class="main-nav__site-item main-nav__site-item--current">
-            <a>
+          <li class="main-nav__site-item">
+            <a href="index.html">
               Главная
             </a>
           </li>
@@ -28,8 +28,8 @@
               Каталог продукции
             </a>
           </li>
-          <li class="main-nav__site-item">
-            <a href="form.html">
+          <li class="main-nav__site-item main-nav__site-item--current">
+            <a>
               Подбор программы
             </a>
           </li>
@@ -37,98 +37,97 @@
       </nav>
     </header>
 
-    <main class="page-main">
-      <h1 class="visually-hidden">Интернет-магазин функционального питания для котов "Кэт Энерджи"</h1>
+    <main class="page-main form-page">
+      <h1 class="form-page__title">Подбор программы</h1>
+      <p class="form-page__desc">Заполните анкету, и мы подберем <br>
+        программу питания для вашего кота
+      </p>
 
-      <section class="promo-block">
-        <div class="promo-block__wrapper">
-          <h2 class="promo-block__title block-title">Функциональное питание для котов</h2>
-          <p class="promo-block__slogan">Занялся собой? Займись котом!</p>
-          <a class="promo-block__button button" href="form.html">Подобрать программу</a>
-          <img src="img/promo-can-mobile.png" width="280" height="270" alt="Банка корма Кэт Энерджи Про с курицей">
-        </div>
-      </section>
+      <form class="form" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="form__fieldset cat-fieldset">
+          <p>
+            <label class="form__cat-label" for="cat-name">Имя:*</label>
+            <input class="form__cat-input" id="cat-name" type="text" name="name" placeholder="Барсик" required>
+          </p>
 
-      <section class="catalog-groups">
-        <h2 class="visually-hidden">Каталог товаров</h2>
-        <div class="catalog-groups__wrapper">
-          <ul class="catalog-groups__list">
-            <li class="catalog-groups__item">
-              <h3 class="catalog-groups__title">Похудение</h3>
-              <p class="catalog-groups__description">
-                Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-              </p>
-              <div class="catalog-groups__link">
-                <a href="catalog.html">Каталог Slim</a>
-                <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                  <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-                </svg>
-              </div>
+          <p>
+            <label class="form__cat-weight-label" for="cat-weight">Вес (кг):*</label>
+            <input class="form__cat-weight-input" id="cat-weight" type="text" name="weight" placeholder="7" required>
+          </p>
+
+          <p>
+            <label class="form__cat-age-label" for="cat-age">Возраст (лет):</label>
+            <input class="form__cat-age-input" id="cat-age" type="text" name="age" placeholder="7">
+          </p>
+        </fieldset>
+
+        <fieldset class="form__fieldset diet-fieldset">
+          <ul>
+            <li class="form__radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" id="losing-weight" value="lose" checked>
+                <label for="losing-weight">Похудение</label>
+            </li>
+            <li class="form__radio">
+                <input class="visually-hidden filter-input-radio filter-input" type="radio" id="gaining-weight" value="gain">
+                <label for="gaining-weight">Набор массы</label>
+            </li>
+            <li class="form__radio">
+              <input class="visually-hidden form__input-radio form__input" type="radio" id="do-not-know" value="dont-know">
+              <label for="do-not-know">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
+        </fieldset>
+
+        <fieldset class="form__fieldset owner-fieldset">
+          <legend class="form__legend">Контактные данные (владельца кота)</legend>
+
+          <p>
+            <label class="form__owner-email-label" for="owner-email">E-mail:*</label>
+            <input class="form__owner-email-input" id="owner-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+          </p>
+
+          <p>
+            <label class="form__owner-phone-label" for="owner-phone">Телефон:*</label>
+            <input class="form__owner-phone-input" id="owner-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+          </p>
+        </fieldset>
+
+        <fieldset class="form__fieldset comment-fieldset">
+          <legend class="form__legend">Комментарий</legend>
+
+          <label for="comment-area"></label>
+          <textarea name="comment" id="comment-area" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+        </fieldset>
+
+        <fieldset class="form__fieldset addition-fieldset">
+          <legend class="form__legend">Дополнительно</legend>
+
+          <ul>
+            <li class="form__checkbox">
+              <input class="visually-hidden form__input-checkbox form__input" type="checkbox" name="sweetener" id="sweetener" checked>
+              <label for="sweetener">Cахарозаменитель</label>
             </li>
 
-            <li class="catalog-groups__item">
-              <h3 class="catalog-groups__title">Набор массы</h3>
-              <p class="catalog-groups__description">
-                Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-              </p>
-              <div class="catalog-groups__link">
-                <a href="catalog.html">Каталог Pro</a>
-                <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
-                  <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
-                </svg>
-              </div>
+            <li class="form__checkbox">
+              <input class="visually-hidden form__input-checkbox form__input" type="checkbox" name="water" id="water">
+              <label for="water">Питьевая вода</label>
+            </li>
+
+            <li class="form__checkbox">
+              <input class="visually-hidden form__input-checkbox form__input" type="checkbox" name="milk" id="milk">
+              <label for="milk">Молоко</label>
+            </li>
+
+            <li class="form__checkbox">
+              <input class="visually-hidden form__input-checkbox form__input" type="checkbox" name="vitamins" id="vitamins">
+              <label for="vitamins">Витамины</label>
             </li>
           </ul>
-        </div>
-      </section>
+        </fieldset>
 
-      <section class="features">
-        <div class="features__wrapper">
-          <h2 class="features__title block-title">Как это работает</h2>
-          <ul class="features__list">
-            <li class="features__item">
-              <p class="features__desc">Функциональное питание содержит только полезные питательные вещества.</p>
-            </li>
-            <li class="features__item">
-              <p class="features__desc">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-            </li>
-            <li class="features__item">
-              <p class="features__desc">Замените один-два приема обычной еды на наше функциональное питание.</p>
-            </li>
-            <li class="features__item">
-              <p class="features__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="live-example">
-        <div class="live-example__wrapper">
-          <h2 class="live-example__title block-title">Живой пример</h2>
-          <p class="live-example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="live-example__stats-list">
-            <div class="live-example__stats-item">
-              <dt class="live-example__stats-number">5 кг</dt>
-              <dd class="live-example__stats-desc">снижение веса</dd>
-            </div>
-            <div class="live-example__stats-item">
-              <dt class="live-example__stats-number">60 дней</dt>
-              <dd class="live-example__stats-desc">затрачено времени</dd>
-            </div>
-          </dl>
-          <p class="live-example__expences">Затраты на питание: <span class="live-example__expences-price">15 000 руб.</span></p>
-
-          <div class="live-example__slider">
-            <img class="live-example__fat-cat-pic" src="img/before-cat-mobile.png" width="311" height="232" alt="Толстый кот">
-            <img class="live-example__slim-cat-pic" src="img/after-cat-mobile.png" width="251" height="240" alt="Худой кот">
-            <span class="live-example__range-word">Было</span>
-            <input class="live-example__range" type="range">
-            <span class="live-example__range-word">Стало</span>
-          </div>
-        </div>
-      </section>
+        <button class="form__button button" type="submit">Отправить заявку</button>
+        <p class="form__add-info">* — Обязательные поля</p>
+      </form>
 
       <section class="invite">
         <p class="invite__slogan">Приглашаем <br>
@@ -149,7 +148,7 @@
 
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <a class="page-footer__logo-name">
+          <a class="page-footer__logo-name" href="index.html">
             <img src="img/logo-name-mobile.svg" width="128" height="24" alt="Логотип интернет-магазина Кэт Энерджи">
           </a>
 
