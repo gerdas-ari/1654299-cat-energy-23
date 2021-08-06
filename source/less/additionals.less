@@ -1,0 +1,85 @@
+.additionals__title {
+  margin-bottom: 36px;
+}
+
+.additionals__list {
+  .list-style();
+}
+
+.additionals__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 30px 40px;
+
+  border-top: 1px solid @basic-grey;
+  margin-bottom: 19px;
+}
+
+.additionals__item:last-child {
+  padding-bottom: 19px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid @basic-grey;
+}
+
+.additionals__item-title {
+  grid-column: ~"1/-1";
+  grid-row: ~"1/2";
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.additionals__item-info {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: min-content;
+}
+
+.additionals__item-number {
+  justify-self: end;
+}
+
+.additionals__table-button {
+  grid-column: ~"1/-1";
+  grid-row: ~"3/-1";
+
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 280px;
+  padding: 11px 0;
+}
+
+.additionals__gift {
+  background-image: url("../img/gift-img-mobile.png");
+  width: 280px;
+  height: 290px;
+
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.additionals__gift svg {
+  text-align: center;
+}
+
+.additionals__gift-text {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @basic-white;
+  text-align: center;
+}

@@ -2,10 +2,12 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
+
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header wrapper">
       <div class="page-header__logo">
         <a class="page-header__logo-pic">
           <img src="img/logo-pic-mobile.svg" width="34" height="38" alt="Логотип интернет-магазина Кэт Энерджи">
@@ -17,7 +19,7 @@
 
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__site-list">
+        <ul class="main-nav__site-list visually-hidden">
           <li class="main-nav__site-item main-nav__site-item--current">
             <a>
               Главная
@@ -41,7 +43,7 @@
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов "Кэт Энерджи"</h1>
 
       <section class="promo-block">
-        <div class="promo-block__wrapper">
+        <div class="promo-block__wrapper wrapper">
           <h2 class="promo-block__title block-title">Функциональное питание для котов</h2>
           <p class="promo-block__slogan">Занялся собой? Займись котом!</p>
           <a class="promo-block__button button" href="form.html">Подобрать программу</a>
@@ -51,15 +53,15 @@
 
       <section class="catalog-groups">
         <h2 class="visually-hidden">Каталог товаров</h2>
-        <div class="catalog-groups__wrapper">
+        <div class="catalog-groups__wrapper wrapper">
           <ul class="catalog-groups__list">
             <li class="catalog-groups__item">
-              <h3 class="catalog-groups__title">Похудение</h3>
+              <h3 class="catalog-groups__title block-title">Похудение</h3>
               <p class="catalog-groups__description">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
               <div class="catalog-groups__link">
-                <a href="catalog.html">Каталог Slim</a>
+                <a class="catalog-groups__link-name" href="catalog.html">Каталог Slim</a>
                 <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
                   <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
@@ -68,12 +70,12 @@
             </li>
 
             <li class="catalog-groups__item">
-              <h3 class="catalog-groups__title">Набор массы</h3>
+              <h3 class="catalog-groups__title block-title">Набор массы</h3>
               <p class="catalog-groups__description">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
               <div class="catalog-groups__link">
-                <a href="catalog.html">Каталог Pro</a>
+                <a class="catalog-groups__link-name" href="catalog.html">Каталог Pro</a>
                 <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/>
                   <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>
@@ -85,7 +87,7 @@
       </section>
 
       <section class="features">
-        <div class="features__wrapper">
+        <div class="features__wrapper wrapper">
           <h2 class="features__title block-title">Как это работает</h2>
           <ul class="features__list">
             <li class="features__item">
@@ -105,50 +107,56 @@
       </section>
 
       <section class="live-example">
-        <div class="live-example__wrapper">
+        <div class="live-example__wrapper wrapper">
           <h2 class="live-example__title block-title">Живой пример</h2>
           <p class="live-example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <dl class="live-example__stats-list">
             <div class="live-example__stats-item">
               <dt class="live-example__stats-number">5 кг</dt>
-              <dd class="live-example__stats-desc">снижение веса</dd>
+              <dd class="live-example__stats-desc">снижение <br> веса</dd>
             </div>
             <div class="live-example__stats-item">
               <dt class="live-example__stats-number">60 дней</dt>
-              <dd class="live-example__stats-desc">затрачено времени</dd>
+              <dd class="live-example__stats-desc">затрачено <br> времени</dd>
             </div>
           </dl>
           <p class="live-example__expences">Затраты на питание: <span class="live-example__expences-price">15 000 руб.</span></p>
 
           <div class="live-example__slider">
             <img class="live-example__fat-cat-pic" src="img/before-cat-mobile.png" width="311" height="232" alt="Толстый кот">
-            <img class="live-example__slim-cat-pic" src="img/after-cat-mobile.png" width="251" height="240" alt="Худой кот">
-            <span class="live-example__range-word">Было</span>
-            <input class="live-example__range" type="range">
-            <span class="live-example__range-word">Стало</span>
+            <img class=" visually-hidden live-example__slim-cat-pic" src="img/after-cat-mobile.png" width="251" height="240" alt="Худой кот">
+            <div class="live-example__range-group">
+              <span class="live-example__range-word">Было</span>
+              <input class="live-example__range" type="range">
+              <span class="live-example__range-word">Стало</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="invite">
-        <p class="invite__slogan">Приглашаем <br>
-          к сотрудничеству <br>
-          дилеров!
-        </p>
-        <p class="invite__address">ул. Большая <br>
-          Конюшенная, д. 19/8
-        </p>
-        <p class="invite__address-city">
-          Санкт-Петербург
-        </p>
+        <div class="invite__wrapper wrapper">
+          <p class="invite__slogan">Приглашаем <br>
+            к сотрудничеству <br>
+            дилеров!
+          </p>
+          <div class="invite__address">
+            <p class="invite__address-street">ул. Большая <br>
+              Конюшенная, д. 19/8
+            </p>
+            <p class="invite__address-city">
+              Санкт-Петербург
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6031394416882!2d30.32129859837542!3d59.93872723058072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627372134784!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6031394416882!2d30.32129859837542!3d59.93872723058072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1627372134784!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </section>
 
       <footer class="page-footer">
-        <div class="page-footer__wrapper">
+        <div class="page-footer__wrapper wrapper">
           <a class="page-footer__logo-name">
             <img src="img/logo-name-mobile.svg" width="128" height="24" alt="Логотип интернет-магазина Кэт Энерджи">
           </a>
