@@ -1,7 +1,11 @@
 .main-nav {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+.main-nav__toggle {
+  margin-left: 75px
 }
 
 .main-nav__site-list {
@@ -10,6 +14,20 @@
   font-size: 20px;
   text-transform: uppercase;
 
-  width: 100%;
+  width: 320px;
   height: 200px;
+  background-color: @basic-white;
+
+  position: absolute;
+  display: grid;
+  align-self: center;
+  justify-items: center;
+  z-index: 2;
+  top: 80px;
+  margin-left: -212px;
+}
+
+.main-nav__site-item {
+  border-top: 1px solid @border-grey;
+  padding-top: 15px;
 }
