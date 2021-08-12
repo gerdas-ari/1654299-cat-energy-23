@@ -8,6 +8,14 @@
   align-items: center;
 
   padding: 39px 20px 22px 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+    padding: 55px 0 61px 0;
+  }
 }
 
 .page-footer__socials-list {
@@ -17,6 +25,10 @@
   align-items: center;
   width: 130px;
   margin: 52px 0 43px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__html-academy {
@@ -24,4 +36,8 @@
   justify-content: space-between;
   align-items: center;
   width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+  }
 }

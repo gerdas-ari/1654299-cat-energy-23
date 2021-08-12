@@ -2,6 +2,21 @@
   display: flex;
   justify-content: space-between;
   padding: 28px 20px 26px 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 625px;
+    margin: 63px 0 52px 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 200px;
+    background-color: @basic-white;
+    order: 1;
+    position: absolute;
+    margin-top: 95px;
+    padding: 0;
+  }
 }
 
 .invite__slogan {
@@ -10,6 +25,23 @@
   font-size: 16px;
   line-height: 20px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 67px;
+    margin-left: 76px;
+  }
+}
+
+.invite__address {
+  @media (min-width: @desktop-width) {
+    margin-top: 67px;
+    margin-right: 89px;
+  }
 }
 
 .invite__address-street,
@@ -19,6 +51,21 @@
   line-height: 20px;
   color: @special-dark-grey;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.invite__address-city {
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 19px;
+  }
 }
 
 .invite-bg {
