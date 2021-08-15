@@ -6,15 +6,29 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 53px;
+  }
 }
 
 .page-header__logo {
   display: flex;
   align-items: center;
-
-  margin-top: 10px;
 }
 
 .page-header__logo-pic {
   margin-right: 57px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 14px;
+  }
 }
