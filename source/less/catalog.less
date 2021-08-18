@@ -3,11 +3,38 @@
   line-height: 36px;
 
   margin: 45px auto 49px auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 65px auto 82px auto;
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 74px auto 84px auto;
+    width: 1220px;
+  }
 }
 
 .catalog__list {
   .list-style();
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px 60px;
+
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 63px 80px;
+
+    margin-bottom: 76px;
+  }
 }
 
 .catalog__item {
@@ -16,6 +43,15 @@
   grid-template-rows: 53px 68px 40px;
 
   margin-bottom: 44px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: @basic-grey;
+
+    margin-bottom: 0;
+  }
 }
 
 .catalog__item-img {
@@ -24,6 +60,19 @@
 
   align-self: center;
   justify-self: center;
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    height: 200px;
+    object-position: center;
+
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    height: 196px;
+  }
 }
 
 .catalog__item-title {
@@ -31,6 +80,19 @@
   line-height: 20px;
   text-transform: uppercase;
   width: 76px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    width: 130px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 145px;
+    margin-bottom: 22px;
+  }
 }
 
 .catalog__item-info {
@@ -44,6 +106,20 @@
   grid-template-rows: min-content min-content min-content;
   width: 142px;
   white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+
+    width: 252px;
+    margin-bottom: 42px;
+    gap: 14px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 171px;
+    gap: 16px 0;
+  }
 }
 
 .catalog__item-number {
@@ -60,4 +136,15 @@
   text-transform: uppercase;
   width: 280px;
   padding: 11px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 248px;
+    padding: 10px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
 }

@@ -3,6 +3,16 @@
   line-height: 36px;
 
   margin: 45px 0 37px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 65px 0 54px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 74px 0 56px 0;
+  }
 }
 
 .form-page__desc {
@@ -13,4 +23,16 @@
   line-height: 18px;
 
   margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-bottom: 66px;
+    margin-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
