@@ -17,7 +17,7 @@
         </a>
       </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__site-list main-nav__site-list--bg">
           <li class="main-nav__site-item">
@@ -47,7 +47,7 @@
         </p>
 
         <form class="form" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="form__fieldset form__fieldset-1">
+          <fieldset class="form__fieldset form__fieldset--1">
             <p>
               <label class="form__label-item" for="cat-name">Имя:*</label>
               <input class="form__input-item" id="cat-name" type="text" name="name" placeholder="Барсик" required>
@@ -64,7 +64,7 @@
             </p>
           </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset-2">
+          <fieldset class="form__fieldset form__fieldset--2">
             <ul class="form__radio-list">
               <li class="form__radio-item">
                   <input class="visually-hidden form__input-radio" type="radio" id="losing-weight" value="lose" checked>
@@ -81,7 +81,7 @@
           </ul>
           </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset-3">
+          <fieldset class="form__fieldset form__fieldset--3">
             <legend class="form__legend form__legend-3">Контактные данные (владельца кота)</legend>
 
             <p>
@@ -95,14 +95,14 @@
             </p>
           </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset-4">
+          <fieldset class="form__fieldset form__fieldset--4">
             <legend class="form__legend">Комментарий</legend>
 
             <label for="comment-area"></label>
             <textarea class="form__textarea" name="comment" id="comment-area" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-          <fieldset class="form__fieldset form__fieldset-5">
+          <fieldset class="form__fieldset form__fieldset--5">
             <legend class="form__legend">Дополнительно</legend>
 
             <ul class="form__checkbox-list">
@@ -197,5 +197,22 @@
         </div>
       </footer>
     </main>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

@@ -34,19 +34,19 @@
   }
 }
 
-.form__fieldset-1 {
+.form__fieldset--1 {
   @media (min-width: @tablet-width) {
     grid-column: ~"1/2";
   }
 }
 
-.form__fieldset-2 {
+.form__fieldset--2 {
   @media (min-width: @tablet-width) {
     grid-column: ~"2/-1";
   }
 }
 
-.form__fieldset-3 {
+.form__fieldset--3 {
   @media (min-width: @tablet-width) {
     grid-column: ~"1/-1";
 
@@ -56,13 +56,13 @@
   }
 }
 
-.form__fieldset-4 {
+.form__fieldset--4 {
   @media (min-width: @tablet-width) {
     grid-column: ~"1/-1";
   }
 }
 
-.form__fieldset-5 {
+.form__fieldset--5 {
   @media (min-width: @tablet-width) {
     grid-column: ~"1/-1";
   }
@@ -85,7 +85,11 @@
   margin: 0;
 }
 
-.form__fieldset-3 p {
+.form__fieldset--3 p {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }

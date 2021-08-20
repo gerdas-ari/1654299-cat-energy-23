@@ -18,6 +18,15 @@
   }
 }
 
+.page-footer__logo-name img:hover {
+  opacity: 0.8;
+}
+
+.page-footer__logo-name img:active,
+.page-footer__logo-name img:focus {
+  opacity: 0.6;
+}
+
 .page-footer__socials-list {
   .list-style();
   display: flex;
@@ -31,6 +40,17 @@
   }
 }
 
+.page-footer__socials-item path:hover {
+  fill: @basic-green;
+}
+
+.page-footer__socials-item path:active,
+.page-footer__socials-item path:focus {
+  fill: @basic-green;
+  opacity: 0.3;
+}
+
+
 .page-footer__html-academy {
   display: flex;
   justify-content: space-between;
@@ -40,4 +60,19 @@
   @media (min-width: @tablet-width) {
     width: 163px;
   }
+}
+
+.page-footer__html-academy img:active,
+.page-footer__html-academy img:focus {
+  opacity: 0.3;
+}
+
+.page-footer__html-academy path:hover {
+  fill: @basic-green;
+}
+
+.page-footer__html-academy path:active,
+.page-footer__html-academy path:focus {
+  fill: @basic-green;
+  opacity: 0.3;
 }
