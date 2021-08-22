@@ -40,16 +40,20 @@
   }
 }
 
-.page-footer__socials-item path:hover {
+.page-footer__socials-item svg:hover path {
   fill: @basic-green;
 }
 
-.page-footer__socials-item path:active,
-.page-footer__socials-item path:focus {
+.page-footer__socials-item svg:active path,
+.page-footer__socials-item svg:focus path {
   fill: @basic-green;
   opacity: 0.3;
 }
 
+.page-footer__socials-item .page-footer__socials-facebook:hover path {
+  fill: @basic-grey;
+  stroke: @basic-green;
+}
 
 .page-footer__html-academy {
   display: flex;
@@ -67,12 +71,12 @@
   opacity: 0.3;
 }
 
-.page-footer__html-academy path:hover {
+.page-footer__html-academy svg:hover path {
   fill: @basic-green;
 }
 
-.page-footer__html-academy path:active,
-.page-footer__html-academy path:focus {
+.page-footer__html-academy svg:active path,
+.page-footer__html-academy svg:focus path {
   fill: @basic-green;
   opacity: 0.3;
 }
