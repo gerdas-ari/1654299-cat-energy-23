@@ -1,6 +1,7 @@
 .main-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -13,7 +14,18 @@
 }
 
 .main-nav__toggle {
-  margin-left: 75px;
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 26px;
+  height: 20px;
+  background-color: @basic-white;
+  padding: 0;
+  top: 19px;
+  right: 33%;
+
+  cursor: pointer;
+  border: none;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -22,6 +34,58 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: @basic-black;
+  box-shadow: 0 7px 0 0 @basic-black, 0 14px 0 0 @basic-black;
+  top: 2px;
+}
+
+.main-nav--closed .main-nav__site-list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    width: 25px;
+    height: 2px;
+    background-color: @basic-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__site-list {
+  position: static;
+  margin-top: 15px;
 }
 
 .main-nav__site-list {
@@ -39,8 +103,7 @@
   align-self: center;
   justify-items: center;
   z-index: 2;
-  top: 70px;
-  margin-left: -212px;
+  top: 66px;
 
   @media (min-width: @tablet-width) {
     position: initial;
@@ -59,7 +122,7 @@
     font-size: 20px;
     line-height: 30px;
 
-    background-color: @basic-green;
+    background-color: transparent;
     color: @basic-white;
   }
 }
@@ -98,4 +161,22 @@
   @media (min-width: @desktop-width) {
     border-bottom: 2px solid @basic-green;
   }
+}
+
+.main-nav__site-item:hover {
+  opacity: 0.6;
+}
+
+.main-nav__site-item:active,
+.main-nav__site-item:focus {
+  opacity: 0.3;
+}
+
+.main-nav__site-item--current:hover {
+  opacity: 1;
+}
+
+.main-nav__site-item--current:active,
+.main-nav__site-item--current:focus {
+  opacity: 1;
 }

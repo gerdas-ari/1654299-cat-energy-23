@@ -18,6 +18,15 @@
   }
 }
 
+.page-footer__logo-name img:hover {
+  opacity: 0.8;
+}
+
+.page-footer__logo-name img:active,
+.page-footer__logo-name img:focus {
+  opacity: 0.6;
+}
+
 .page-footer__socials-list {
   .list-style();
   display: flex;
@@ -31,6 +40,21 @@
   }
 }
 
+.page-footer__socials-item svg:hover path {
+  fill: @basic-green;
+}
+
+.page-footer__socials-item svg:active path,
+.page-footer__socials-item svg:focus path {
+  fill: @basic-green;
+  opacity: 0.3;
+}
+
+.page-footer__socials-item .page-footer__socials-facebook:hover path {
+  fill: @basic-grey;
+  stroke: @basic-green;
+}
+
 .page-footer__html-academy {
   display: flex;
   justify-content: space-between;
@@ -40,4 +64,19 @@
   @media (min-width: @tablet-width) {
     width: 163px;
   }
+}
+
+.page-footer__html-academy img:active,
+.page-footer__html-academy img:focus {
+  opacity: 0.3;
+}
+
+.page-footer__html-academy svg:hover path {
+  fill: @basic-green;
+}
+
+.page-footer__html-academy svg:active path,
+.page-footer__html-academy svg:focus path {
+  fill: @basic-green;
+  opacity: 0.3;
 }
