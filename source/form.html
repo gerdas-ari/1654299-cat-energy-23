@@ -3,14 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon-152.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon-apple-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body class="page__body">
     <header class="page-header wrapper">
       <div class="page-header__logo">
         <a class="page-header__logo-pic" href="index.html">
-          <img src="img/logo-pic-mobile.svg" width="34" height="38" alt="Логотип интернет-магазина Кэт Энерджи">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-pic-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-pic-tablet.svg">
+            <img src="img/logo-pic-mobile.svg" width="34" height="38" alt="Логотип интернет-магазина Кэт Энерджи">
+          </picture>
         </a>
         <a class="page-header__logo-name" href="index.html">
           <img src="img/logo-name-mobile.svg" width="101" height="18" alt="Название интернет-магазина Кэт Энерджи">
