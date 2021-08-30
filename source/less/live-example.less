@@ -4,10 +4,36 @@
   @media (min-width: @tablet-width) {
     background-color: transparent;
     border-top: 1px solid @basic-grey;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
     border: none;
+    position: relative;
+  }
+}
+
+.live-example::before {
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: @bg-grey;
+    height: 462px;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: @bg-grey;
+    height: 475px;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
   }
 }
 
@@ -177,8 +203,18 @@
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
-    width: 672px;
-    height: 501px;
+    width: 708px;
+    height: 620px;
+
+    margin-bottom: -80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 690px;
+    height: 656px;
+
+    margin-bottom: -78px;
+    margin-top: -60px;
   }
 }
 
