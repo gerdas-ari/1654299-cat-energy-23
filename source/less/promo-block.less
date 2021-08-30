@@ -4,21 +4,22 @@
   background-repeat: no-repeat;
   background-position: top;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-img-green-mobile@2x.png");
+    background-size: 320px 302px;
+  }
+
   @media (min-width: @tablet-width) {
-    background-image: url("../img/background-img-tablet.png");
+    background-image: none;
     background-position-y: 200px;
     width: 709px;
-    height: 810px;
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/background-img-can-dt.png");
+    background-image: none;
     width: 1220px;
-    height: 555px;
-    background-position-y: 0;
-    background-position-x: 468px;
-    margin-bottom: 82px;
+    margin-bottom: 135px;
   }
 }
 
@@ -89,15 +90,32 @@
   padding: 11px 0;
 
   @media (min-width: @tablet-width) {
+    order: 0;
     font-size: 20px;
     line-height: 20px;
     width: 244px;
     padding: 17px 0;
+    z-index: 1;
   }
 }
 
 .promo-block__wrapper img {
+  width: 280px;
+  height: 270px;
+
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 709px;
+    height: 609px;
+
+    margin-top: -80px;
+    margin-left: -87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+
+    margin-left: 370px;
+    margin-top: -370px;
   }
 }

@@ -56,7 +56,11 @@
           <h2 class="promo-block__title block-title">Функциональное питание для котов</h2>
           <p class="promo-block__slogan">Занялся собой? Займись котом!</p>
           <a class="promo-block__button button" href="form.html">Подобрать программу</a>
-          <img src="img/promo-can-mobile.png" width="280" height="270" alt="Банка корма Кэт Энерджи Про с курицей">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/promo-can-dt.png 1x, img/promo-can-dt@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-can-tablet.png 1x, img/promo-can-tablet@2x.png 2x">
+            <img src="img/promo-can-mobile.png" width="280" height="270" srcset="img/promo-can-mobile@2x.png 2x" alt="Банка корма Кэт Энерджи Про с курицей">
+          </picture>
         </div>
       </section>
 
@@ -134,8 +138,11 @@
             </div>
 
           <div class="live-example__slider">
-            <img class="live-example__fat-cat-pic" src="img/before-cat-mobile.png" width="311" height="232" alt="Толстый кот">
-            <img class=" visually-hidden live-example__slim-cat-pic" src="img/after-cat-mobile.png" width="251" height="240" alt="Худой кот">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/cat-slider-dt.png 1x, img/cat-slider-dt@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png 1x, img/cat-slider-tablet@2x.png 2x">                <img class="live-example__fat-cat-pic" src="img/before-cat-mobile.png" width="311" height="232" srcset="img/before-cat-mobile@2x.png 2x" alt="Толстый кот">
+              <img class=" visually-hidden live-example__slim-cat-pic" src="img/after-cat-mobile.png" width="251" height="240" srcset="img/after-cat-mobile@2x.png 2x" alt="Худой кот">
+            </picture>
             <div class="live-example__range-group">
               <span class="live-example__range-word">Было</span>
               <input class="live-example__range" type="range">
