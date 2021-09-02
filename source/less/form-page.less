@@ -1,6 +1,7 @@
 .form-page__title {
   font-size: 36px;
   line-height: 36px;
+  position: relative;
 
   margin: 45px 0 37px 0;
 
@@ -12,6 +13,20 @@
 
   @media (min-width: @desktop-width) {
     margin: 74px 0 56px 0;
+  }
+}
+
+.form-page__title::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 1px;
+  background-color: #d9d9d9;
+  top: -27px;
+  left: -20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 

@@ -119,9 +119,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 162px;
+  }
+}
+
+.live-example__stats-item::before {
+  content: "";
+  position: absolute;
+  width: 124px;
+  height: 56px;
+  background-image: url("../img/live-ex-border.svg");
+  background-size: 124px 56px;
+  background-repeat: none;
+  background-position: 0 0;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 72px;
+    background-size: 162px 72px;
   }
 }
 
@@ -131,7 +149,7 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  padding-bottom: 14px;
+  padding-bottom: 7px;
   padding-top: 14px;
 
   @media (min-width: @tablet-width) {
@@ -154,6 +172,18 @@
     font-size: 14px;
     line-height: 14px;
     width: auto;
+  }
+}
+
+.live-example__stats-desc-time {
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+    padding: 0 8px;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @bg-grey;
   }
 }
 
