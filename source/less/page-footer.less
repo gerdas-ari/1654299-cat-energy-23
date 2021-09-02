@@ -18,6 +18,10 @@
   }
 }
 
+.page-footer__wrapper svg {
+  fill: @special-grey-2;
+}
+
 .page-footer__logo-name img:hover {
   opacity: 0.8;
 }
@@ -34,24 +38,56 @@
   align-items: center;
   width: 130px;
   margin: 52px 0 43px 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin: 0;
   }
 }
 
-.page-footer__socials-item svg:hover path {
+.page-footer__socials-list::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 1px;
+  background-color: #d9d9d9;
+  top: -20px;
+  left: -75px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__socials-list::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 1px;
+  background-color: #d9d9d9;
+  bottom: -17px;
+  left: -75px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__socials-item svg:hover {
   fill: @basic-green;
 }
 
-.page-footer__socials-item svg:active path,
-.page-footer__socials-item svg:focus path {
+.page-footer__socials-item svg:active,
+.page-footer__socials-item svg:focus {
   fill: @basic-green;
   opacity: 0.3;
 }
 
-.page-footer__socials-item .page-footer__socials-facebook:hover path {
-  fill: @basic-grey;
+.page-footer__socials-facebook {
+  stroke: @special-grey-2;
+}
+
+.page-footer__socials-item .page-footer__socials-facebook:hover {
   stroke: @basic-green;
 }
 
