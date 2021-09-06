@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon-152.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon-apple-180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body class="page__body page__index">
@@ -161,8 +161,9 @@
           <div class="live-example__slider">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/cat-slider-dt.png 1x, img/cat-slider-dt@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png 1x, img/cat-slider-tablet@2x.png 2x">                <img class="live-example__fat-cat-pic" src="img/before-cat-mobile.png" width="311" height="232" srcset="img/before-cat-mobile@2x.png 2x" alt="Толстый кот">
-              <img class=" visually-hidden live-example__slim-cat-pic" src="img/after-cat-mobile.png" width="251" height="240" srcset="img/after-cat-mobile@2x.png 2x" alt="Худой кот">
+              <source media="(min-width: 768px)" srcset="img/cat-slider-tablet.png 1x, img/cat-slider-tablet@2x.png 2x">
+              <img class="live-example__fat-cat-pic" src="img/before-cat-mobile.png" width="311" height="232" srcset="img/before-cat-mobile@2x.png 2x" alt="Толстый кот">
+              <!-- <img class="visually-hidden live-example__slim-cat-pic" src="img/after-cat-mobile.png" width="251" height="240" srcset="img/after-cat-mobile@2x.png 2x" alt="Худой кот"> -->
             </picture>
             <div class="live-example__range-group">
               <span class="live-example__range-word">Было</span>
@@ -238,21 +239,6 @@
       </footer>
     </main>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
