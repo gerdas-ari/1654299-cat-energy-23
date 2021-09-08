@@ -12,7 +12,7 @@
 
   @media (min-width: @tablet-width) {
     width: 625px;
-    padding: 67px 0 52px 0;
+    padding: 65px 0 59px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -35,7 +35,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -58,16 +58,23 @@
   line-height: 20px;
   color: @special-dark-grey;
   margin: 0;
+  margin-right: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+    margin-right: 0;
+
+    @media (min-width: @desktop-width) {
+      text-align: start;
+    }
   }
 }
 
 .invite__address-city {
   @media (min-width: @tablet-width) {
-    margin-top: 25px;
+    margin-top: 17px;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,5 +1,6 @@
 .page-footer {
   background-color: @basic-grey;
+  margin-top: -4px;
 }
 
 .page-footer__wrapper {
@@ -37,11 +38,12 @@
   justify-content: space-between;
   align-items: center;
   width: 130px;
-  margin: 52px 0 43px 0;
+  margin: 49px 0 38px 0;
   position: relative;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    padding-left: 30px;
   }
 }
 
@@ -51,7 +53,7 @@
   width: 280px;
   height: 1px;
   background-color: #d9d9d9;
-  top: -20px;
+  top: -22px;
   left: -75px;
 
   @media (min-width: @tablet-width) {
@@ -83,8 +85,27 @@
   opacity: 0.3;
 }
 
+.page-footer__socials-vk {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.page-footer__socials-instagram {
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
 .page-footer__socials-facebook {
   stroke: @special-grey-2;
+
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 33px;
+  }
 }
 
 .page-footer__socials-item .page-footer__socials-facebook:hover {
