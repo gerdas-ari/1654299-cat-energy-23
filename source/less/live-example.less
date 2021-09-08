@@ -21,7 +21,7 @@
     background-color: @bg-grey;
     height: 462px;
     width: 100%;
-    bottom: 0;
+    bottom: -2px;
     z-index: -1;
   }
 
@@ -30,7 +30,7 @@
     position: absolute;
     content: "";
     background-color: @bg-grey;
-    height: 475px;
+    height: 463px;
     width: 100%;
     bottom: 0;
     z-index: -1;
@@ -60,7 +60,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin-bottom: 146px;
+    margin-bottom: 120px;
   }
 }
 
@@ -76,6 +76,7 @@
 
   @media (min-width: @desktop-width) {
     width: 436px;
+    margin: 0;
     grid-column: ~"1/2";
   }
 }
@@ -85,7 +86,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 48px;
+    margin-top: 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -98,14 +100,15 @@
     width: 366px;
     height: 174px;
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
 .live-example__stats-list {
   display: flex;
-  justify-content: space-around;
-  margin-top: 25px;
-  margin-bottom: 27px;
+  justify-content: space-between;
+  margin-top: 26px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     width: 366px;
@@ -149,7 +152,7 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  padding-bottom: 7px;
+  padding-bottom: 8px;
   padding-top: 14px;
 
   @media (min-width: @tablet-width) {
@@ -206,17 +209,19 @@
     width: auto;
     justify-self: start;
     margin: 0;
+    margin-bottom: 19px;
   }
 }
 
 .live-example__expences-price {
   @media (min-width: @desktop-width) {
     padding-left: 63px;
+    line-height: 30px;
   }
 }
 
 .live-example__slider {
-  padding-bottom: 25px;
+  padding-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 70px;
@@ -225,6 +230,7 @@
   @media (min-width: @desktop-width) {
     grid-column: ~"2/-1";
     grid-row: ~"1/-1";
+    padding-bottom: 69px;
   }
 }
 
@@ -236,21 +242,26 @@
     width: 708px;
     height: 620px;
 
-    margin-bottom: -80px;
+    margin-bottom: -74px;
   }
 
   @media (min-width: @desktop-width) {
     width: 690px;
     height: 656px;
 
-    margin-bottom: -78px;
-    margin-top: -60px;
+    margin-bottom: -100px;
+    margin-top: -61px;
+    margin-right: -40px;
   }
 }
 
 .live-example__range-group {
   display: flex;
   justify-content: center;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+  }
 }
 
 .live-example__range-word {
@@ -267,7 +278,7 @@
 
 .live-example__range {
   width: 84px;
-  margin: 0 13px;
+  margin: 0 18px;
 
   @media (min-width: @tablet-width) {
     width: 428px;
