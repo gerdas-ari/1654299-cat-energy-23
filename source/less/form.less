@@ -257,6 +257,30 @@
   right: 14px;
 }
 
+.form__icon-mail {
+  stroke: @special-dark-grey-2;
+}
+
+.form__icon-phone {
+  fill: @special-dark-grey-2;
+}
+
+.form__input-item:invalid + .form__icon-mail {
+  stroke: @status-error;
+}
+
+.form__input-item:invalid + .form__icon-phone {
+  fill: @status-error;
+}
+
+.form__input-item:focus + .form__icon-mail {
+  stroke: @basic-green;
+}
+
+.form__input-item:focus + .form__icon-phone {
+  fill: @basic-green;
+}
+
 .form__radio-list {
   .list-style();
   margin: 50px 0 28px 0;
