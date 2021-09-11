@@ -75,7 +75,7 @@
     margin-left: 53px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-left: 0;
   }
 }
@@ -158,6 +158,10 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 59px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-groups__link-name {
@@ -166,7 +170,7 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  margin-right: 11px;
+  margin-right: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -177,4 +181,8 @@
   @media (min-width: @desktop-width) {
     margin-right: 28px;
   }
+}
+
+.catalog-groups__link svg {
+  margin-bottom: 2px;
 }
