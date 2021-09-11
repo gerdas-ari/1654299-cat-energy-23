@@ -29,7 +29,7 @@
     display: block;
     position: absolute;
     content: "";
-    background-color: @bg-grey;
+    background-color: @basic-grey;
     height: 463px;
     width: 100%;
     bottom: 0;
@@ -278,10 +278,59 @@
 
 .live-example__range {
   width: 84px;
-  margin: 0 18px;
+  margin: 3px 18px 0 18px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     width: 428px;
     margin: 0 22px;
+  }
+}
+
+.live-example__range-bar {
+  width: 82px;
+  height: 12px;
+  border: 1px solid @special-grey;
+  border-radius: 6px;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    background-color: @special-grey;
+    border: none;
+    margin-top: 13px;
+  }
+}
+
+.live-example__range-toggle {
+  position: absolute;
+  width: 35px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: @basic-green;
+  top: 4px;
+  left: 5px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 8px;
+    height: 8px;
+    background-color: @basic-green;
+    border: 13px solid @basic-white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+
+    top: 0;
+    left: 43%;
+  }
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    outline: 1px solid @basic-green;
   }
 }
