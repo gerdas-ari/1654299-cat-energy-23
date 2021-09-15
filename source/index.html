@@ -12,7 +12,7 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   </head>
 
-  <body class="page__body page__index--desktop">
+  <body class="page__body page__body--desktop">
     <header class="page-header wrapper">
       <div class="page-header__logo">
         <a class="page-header__logo-pic">
@@ -27,7 +27,7 @@
         </a>
       </div>
 
-      <nav class="main-nav main-nav--nojs">
+      <nav class="main-nav main-nav--closed">
           <!-- main-nav--nojs - главное меню с отключенным JS, main-nav--closed - главное меню в закрытом состоянии с JS, main-nav--opened - главное меню в открытом состоянии с JS  -->
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__site-list">
@@ -171,7 +171,7 @@
               <span class="live-example__range-word">Было</span>
               <div class="live-example__range">
                 <div class="live-example__range-bar"></div>
-                <div class="live-example__range-toggle"></div>
+                <div class="live-example__range-toggle" aria-label="Бегунок для переключения слайдера"></div>
               </div>
               <span class="live-example__range-word">Стало</span>
             </div>
@@ -208,21 +208,21 @@
 
           <ul class="page-footer__socials-list">
             <li class="page-footer__socials-item">
-              <a href="#">
+              <a href="#" aria-label="Вконтакте">
                 <svg class="page-footer__socials-vk" width="23" height="16">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="page-footer__socials-item">
-              <a href="#">
+              <a href="#"  aria-label="Инстаграм">
                 <svg class="page-footer__socials-instagram" width="16" height="16">
                   <use xlink:href="img/sprite.svg#icon-inst"></use>
                 </svg>
               </a>
             </li>
             <li class="page-footer__socials-item">
-              <a href="#">
+              <a href="#"  aria-label="Фэйсбук">
                 <svg class="page-footer__socials-facebook" width="22" height="22">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
