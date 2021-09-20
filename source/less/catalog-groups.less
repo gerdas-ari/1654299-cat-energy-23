@@ -171,6 +171,7 @@
   line-height: 16px;
   text-transform: uppercase;
   margin-right: 13px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -183,11 +184,21 @@
   }
 }
 
-.catalog-groups__link svg {
-  margin-bottom: 2px;
-  cursor: pointer;
+.catalog-groups__link-name::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-arrow-mobile.svg");
+  width: 24px;
+  height: 12px;
+  top: 6px;
+  left: 100px;
+}
 
-  &:hover {
-    transform: scaleX(1.4);
-  }
+.catalog-groups__link-name:hover::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-arrow-mobile-hov.svg");
+  width: 32px;
+  top: 6px;
+  left: 100px;
 }
